@@ -148,7 +148,7 @@ const float voltageThreshold = 13.5;
 // Simulated voltage reader
 float readVoltage() {
   int raw = analogRead(A0);
-  float voltage = (raw / 1023.0) * 15.0;  // adjust to your divider
+  float voltage = (raw / 1023.0) * 18.0;  // adjust to your divider; this measures 0.2V higher at 14V -> 14.2
   if (voltage < 1.0) voltage = 0.0;       // fix for <1V
   return voltage;
 }
